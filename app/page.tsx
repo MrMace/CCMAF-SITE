@@ -81,11 +81,10 @@ export default async function Home() {
       {/* Affiliations */}
       <section className="border-y border-line bg-surface py-14">
         <div className="mx-auto max-w-6xl px-5 text-center">
-          <p className="text-xs font-bold uppercase tracking-[.2em] text-muted">Proud affiliates</p>
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-muted">Proud affiliate</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
             {[
               { src: "/img/10th-planet.jpg", alt: "10th Planet Jiu Jitsu Indianapolis" },
-              { src: "/img/bang-muay-thai.png", alt: "Bang Muay Thai official affiliate" },
             ].map((a) => (
               <div key={a.src} className="relative h-28 w-44 overflow-hidden rounded-2xl border border-line bg-black sm:h-32 sm:w-52">
                 <Image src={a.src} alt={a.alt} fill sizes="208px" className="object-contain" />
