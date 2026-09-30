@@ -20,6 +20,7 @@ export const defaults = {
     heroEyebrow: "Indianapolis, Indiana",
     heroTitleLine1: "Train hard.",
     heroTitleLine2: "Belong here.",
+    heroVideoId: "0DasL-VmsPA", // YouTube video ID for the hero background (leave empty for none)
     heroText:
       "The premier destination for martial arts practitioners in the heart of Indianapolis. A dynamic, empowering environment for all ages and fitness levels, with experienced instructors behind you every step.",
     stats: [
@@ -154,6 +155,10 @@ export const defaults = {
     eyebrow: "In loving memory",
     title: 'Christian "King" Jones',
     dates: "Went home March 9, 2021 · Age 27",
+    // A YouTube link or a direct .mp4 URL. The current file is hosted on the old Duda site and
+    // will stop working when Duda is cancelled: upload it to YouTube (unlisted) and paste the link here.
+    videoUrl:
+      "https://vid.cdn-website.com/085c8a63/videos/1hBac2XRua40mkrVW3Gx_King_Jones_Tribute-v.mp4",
     paragraphs: [
       {
         text: 'Christian "King" Alexander Jones-Christopher, 27, of Indianapolis, went home to be with the Lord on March 9, 2021.',

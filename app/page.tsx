@@ -20,6 +20,19 @@ export default async function Home() {
     <SiteFrame>
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-32">
+        {home.heroVideoId && (
+          <div className="pointer-events-none absolute inset-0 hidden overflow-hidden md:block" aria-hidden>
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${home.heroVideoId}?autoplay=1&mute=1&loop=1&playlist=${home.heroVideoId}&controls=0&modestbranding=1&playsinline=1&rel=0&disablekb=1`}
+              title="Gym background video"
+              tabIndex={-1}
+              allow="autoplay; encrypted-media"
+              className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 opacity-60"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-bg/40" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-bg to-transparent" />
+          </div>
+        )}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_500px_at_85%_0%,rgba(217,177,92,.18),transparent_60%),radial-gradient(700px_500px_at_0%_100%,rgba(217,177,92,.08),transparent_60%)]" />
         <div
           className="pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_70%_30%,#000,transparent_70%)]"
@@ -61,6 +74,23 @@ export default async function Home() {
             <div className="absolute bottom-5 left-5 flex items-center gap-2 text-sm text-ink">
               <MapPin size={16} className="text-accent" /> {site.address}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Affiliations */}
+      <section className="border-y border-line bg-surface py-14">
+        <div className="mx-auto max-w-6xl px-5 text-center">
+          <p className="text-xs font-bold uppercase tracking-[.2em] text-muted">Proud affiliates</p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
+            {[
+              { src: "/img/10th-planet.jpg", alt: "10th Planet Jiu Jitsu Indianapolis" },
+              { src: "/img/bang-muay-thai.png", alt: "Bang Muay Thai official affiliate" },
+            ].map((a) => (
+              <div key={a.src} className="relative h-28 w-44 overflow-hidden rounded-2xl border border-line bg-black sm:h-32 sm:w-52">
+                <Image src={a.src} alt={a.alt} fill sizes="208px" className="object-contain" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
