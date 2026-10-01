@@ -20,7 +20,9 @@ export const defaults = {
     heroEyebrow: "Indianapolis, Indiana",
     heroTitleLine1: "Train hard.",
     heroTitleLine2: "Belong here.",
-    heroVideoId: "0DasL-VmsPA", // YouTube video ID for the hero background (leave empty for none)
+    // YouTube video ID for the hero background (the part after v=). Empty means no video.
+    // The original ID (0DasL-VmsPA) was deleted or made private on YouTube, so it's off for now.
+    heroVideoId: "",
     heroText:
       "The premier destination for martial arts practitioners in the heart of Indianapolis. A dynamic, empowering environment for all ages and fitness levels, with experienced instructors behind you every step.",
     stats: [
